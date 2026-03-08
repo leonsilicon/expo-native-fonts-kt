@@ -19,7 +19,7 @@ With `expo-native-fonts`, font files are loaded via native code. What does that 
 1. Install the package:
 
    ```bash
-   yarn add expo-native-fonts
+   bun add expo-native-fonts-kt
    ```
 
 2. Add your font files to a directory (we recommend `assets/fonts`):
@@ -40,7 +40,7 @@ With `expo-native-fonts`, font files are loaded via native code. What does that 
      "expo": {
        "plugins": [
          [
-           "expo-native-fonts",
+           "expo-native-fonts-kt",
            {
              "Raleway": [
                {
@@ -110,7 +110,7 @@ To find the family name:
      "expo": {
        "plugins": [
          [
-           "expo-native-fonts",
+           "expo-native-fonts-kt",
            {
              "Matter": [
                // ...
@@ -142,28 +142,7 @@ To set up the repository locally on your machine, follow these steps:
    yarn build
    ```
 
-### Testing
-
-To test that the project works, set up an example project app using [`create-expo-app`](https://www.npmjs.com/package/create-expo-app) and follow these steps:
-
-1. In this repo, link the project:
-
-   ```bash
-   yarn link
-   ```
-
-2. In your example project repo, link the dependency:
-
-   ```bash
-   yarn link expo-native-fonts
-   ```
-
-3. In your example project repo, run the prebuild command:
-
-   ```bash
-   yarn expo prebuild --clean
-   ```
-
 ## Credits
 
+Original creator [@joshpensky]
 Major props to [@jsamr](https://github.com/jsamr) for their documentation on supporting fonts natively: https://github.com/jsamr/react-native-font-demo

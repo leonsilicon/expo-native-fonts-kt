@@ -62,7 +62,7 @@ const withFontsXML: ConfigPlugin<Props> = (config, props) => {
     // prettier-ignore
     const filename = `${slugify(familyName)}_${fontAsset.weight}_${fontAsset.style ?? 'normal'}`
     // prettier-ignore
-    return `<font app:fontStyle="${fontAsset.style ?? 'normal'}" app:fontWeight="${fontAsset.weight}" app:font="@font/${filename}" />`
+    return `<font android:fontStyle="${fontAsset.style ?? 'normal'}" android:fontWeight="${fontAsset.weight}" android:font="@font/${filename}" />`
   })}
 </font-family>
 `.trim();

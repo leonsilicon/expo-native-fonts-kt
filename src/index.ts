@@ -80,19 +80,19 @@ const withFontsMainApplication: ConfigPlugin<Props> = (config, props) => {
   return withMainApplication(config, async (config) => {
     // Add import statement
     config.modResults.contents = config.modResults.contents.replace(
-      "import com.facebook.react.ReactPackage;",
-      "import com.facebook.react.ReactPackage;\nimport com.facebook.react.views.text.ReactFontManager;"
+      "import com.facebook.react.ReactPackage",
+      "import com.facebook.react.ReactPackage\nimport com.facebook.react.views.text.ReactFontManager"
     );
 
     // Add LOC to load custom fonts
     const familyNames = Object.keys(props);
     const createLOC = familyNames.map((familyName) => {
       // prettier-ignore
-      return `ReactFontManager.getInstance().addCustomFont(this, "${familyName}", R.font.${slugify(familyName)});`
+      return `ReactFontManager.getInstance().addCustomFont(this, "${familyName}", R.font.${slugify(familyName)})\n`
     });
     config.modResults.contents = config.modResults.contents.replace(
-      "super.onCreate();",
-      `super.onCreate();\n${createLOC.join("\n")}`
+      "super.onCreate()",
+      `super.onCreate()\n${createLOC.join("\n")}`
     );
 
     return config;

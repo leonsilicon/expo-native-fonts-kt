@@ -1,6 +1,6 @@
 {
-  "name": "expo-native-fonts",
-  "version": "0.0.4",
+  "name": "expo-native-fonts-kt",
+  "version": "0.1.0",
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "license": "MIT",
@@ -19,11 +19,10 @@
     "xcode": "^3.0.1"
   },
   "devDependencies": {
-    "expo": "^47.0.0",
-    "expo-module-scripts": "^3.0.9"
+    "expo": "^55"
   },
   "peerDependencies": {
-    "expo": ">=47.0.0"
+    "expo": ">=52.0.0"
   },
   "peerDependenciesMeta": {
     "expo": {

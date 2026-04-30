@@ -16,7 +16,8 @@
     "expo-module": "expo-module"
   },
   "dependencies": {
-    "xcode": "^3.0.1"
+    "xcode": "^3.0.1",
+    "@expo/config-plugins": "^55.0.8"
   },
   "devDependencies": {
     "expo": "^55"
@@ -28,5 +29,6 @@
     "expo": {
       "optional": true
     }
-  }
+  },
+  "packageManager": "bun@1.3.13"
 }

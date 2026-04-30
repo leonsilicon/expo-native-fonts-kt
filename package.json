@@ -20,7 +20,8 @@
     "@expo/config-plugins": "^55.0.8"
   },
   "devDependencies": {
-    "expo": "^55"
+    "expo": "^55",
+    "typescript": "^6.0.3"
   },
   "peerDependencies": {
     "expo": ">=52.0.0"

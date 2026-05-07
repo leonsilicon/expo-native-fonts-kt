@@ -78,11 +78,13 @@ const withFontsXML: ConfigPlugin<Props> = (config, props) => {
 // Updates the MainApplication.java file to load the custom fonts
 const withFontsMainApplication: ConfigPlugin<Props> = (config, props) => {
   return withMainApplication(config, async (config) => {
-    // Add import statement
-    config.modResults.contents = config.modResults.contents.replace(
-      "import com.facebook.react.ReactPackage",
-      "import com.facebook.react.ReactPackage\nimport com.facebook.react.views.text.ReactFontManager"
-    );
+    // Add import statement only once
+    if (!config.modResults.contents.includes("com.facebook.react.views.text.ReactFontManager")) {
+      config.modResults.contents = config.modResults.contents.replace(
+        "import com.facebook.react.ReactPackage",
+        "import com.facebook.react.ReactPackage\nimport com.facebook.react.views.text.ReactFontManager"
+      );
+    }
 
     // Add LOC to load custom fonts
     const familyNames = Object.keys(props);
